@@ -1,0 +1,110 @@
+body{
+    background-color: #4856c1;
+}
+.doctor{
+    color: white;
+}
+
+/* navigation bar sheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 12pt;
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+
+/* image style sheet */
+.doctortext{
+    position: absolute;
+    justify-content: center;
+    bottom: 299px;
+    left: 790px;
+    color: #000000;
+    padding: 10px;
+    font-size: 26px;
+    top: 300px;
+}
+@media(max-width:400px){
+  .doctortext{left: 0px};
+}
+.doctorimg{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+/*doctor text */
+.desc{
+    color: white;
+}
+
+
+/* main sheet */
+div.gallery {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 360px;
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+  
+* {
+    box-sizing: border-box;
+}
+  
+.responsive {
+    padding: 0 6px;
+    width: 24.99999%;
+}
+  
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 48%;
+      margin: 6px 0;
+    }
+}
+  
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+    .doctorimg img{
+        height: 300px;
+    }
+    .doctortext h1{
+        font-size: 30px;
+        position: relative;
+        bottom: 235px;
+    }
+}
+  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+}
