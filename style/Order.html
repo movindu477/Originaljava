@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="Order.css">
+    <link rel="stylesheet" href="consult.css">
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_package_v0.16 (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_package_v0.16 (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_package_v0.16 (2)/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="Order.js" defer></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <a class="home-link" href="../index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="doctor.html">Doctors</a>
+            <a href="pharmacy.html">Pharmacy</a>
+            <a href="testmonial.html">Patient Testimonial</a>
+            <a href="consult.html">Consultation Reservation</a>
+        </div>
+    </nav>
+    <br><br>
+
+    <section class="cart1">
+        <h2>My Cart</h2>
+        <table id="new-cart-table1">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="total1" id="cart-total-container1">
+            <strong>Total: </strong><span class="total2" id="cart-total1">LKR 0.00</span>
+        </div>
+    </section>
+    <br>
+
+    <h1>Pharmacy Product Order Form</h1>
+    <form id="orderForm">
+        <label for="customerName">Full Name:</label>
+        <input type="text" id="customerName" name="customerName" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <div class="phone-input">
+            <select id="countryCode" name="countryCode" required>
+                <option value="+1">+1 (USA/Canada)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+91">+91 (India)</option>
+                <option value="+94">+94 (Sri Lanka)</option>
+                <option value="+61">+61 (Australia)</option>
+                <option value="+81">+81 (Japan)</option>
+            </select>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+        </div>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+
+        <label for="deliveryAddress">Delivery Address:</label>
+        <textarea id="deliveryAddress" name="deliveryAddress" rows="4" placeholder="Enter your delivery address" required></textarea>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required onchange="toggleCardDetails()">
+            <option value="">Select Payment Method</option>
+            <option value="CreditCard">Credit Card</option>
+            <option value="DebitCard">Debit Card</option>
+            <option value="CashOnDelivery">Cash on Delivery</option>
+        </select>
+
+        <div id="cardDetails" style="display: none;">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" pattern="\d{16}" maxlength="16">
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" pattern="\d{3}" maxlength="3">
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="month" id="expiryDate" name="expiryDate">
+        </div>
+
+        <button type="button" onclick="submitOrder()">Place Order</button>
+    </form>
+    <br>
+
+    <div class="popup-overlay" id="orderPopup" style="display: none;">
+        <div class="popup-container">
+          <h2>Order Confirmation</h2>
+          <p><strong>Thank you for your order!</strong></p>
+          <p><strong>Order Details:</strong></p>
+          <p><strong>Name:</strong> <span id="popupCustomerName"></span></p>
+          <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+          <p><strong>Phone:</strong> <span id="popupPhoneNumber"></span></p>
+          <p><strong>Product:</strong> <span id="popupProductName"></span></p>
+          <p><strong>Delivery Address:</strong> <span id="popupDeliveryAddress"></span></p>
+          <p><strong>Payment Method:</strong> <span id="popupPaymentMethod"></span></p>
+          <p><strong>Estimated Delivery Date:</strong> <span id="popupEstimatedDeliveryDate"></span></p>
+          <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+      </div>
+      
+    
+</body>
+<footer>
+    <div class="container1">
+        <img src="../img/logo.jpg" alt="" class="footer-logo">
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Email: info@gmail.com</p>
+            <p>Phone: +94 3090 367</p>
+            <p>Address: 7/7, Jayasamrugama, Ragama</p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick Links</h3>
+            <ul class="list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="doctor.html">Doctor</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="pharmacy.html">Pharmacy</a></li>
+                <li><a href="consult.html">Consulting Reservation</a></li>
+                <li><a href="testmonial.html">Patient Testimonial</a></li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+                <li><a href="https://www.instagram.com/itz.movi_jr/"><img src="../img/instagram.png" alt="Instagram" class="small"></a></li>
+                <li><a href="https://x.com/home?lang=en"><img src="../img/twitter.png" alt="Twitter" class="small"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="../img/youtube.png" alt="YouTube" class="small"></a></li>
+                <li><a href="https://www.instagram.com/puffy_x3/"><img src="../img/instagram.png" alt="Instagram" class="small"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; This Webpage is Copyrighted</p>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registering Page</title>
+    <link rel="stylesheet" href="patient.css">
+    <link rel="stylesheet" href="service-register.css">
+    <link rel="stylesheet" href="homestyle.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_package_v0.16 (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_package_v0.16 (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_package_v0.16 (2)/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+
+      <a class="home-link" href="../index.html">Home</a> <!-- link back to homepage -->
+      <a href="aboutus.html">About</a> 
+      <a href="service.html">Services</a>
+      <a href="doctor.html">Doctors</a>
+      <a href="pharmacy.html">Pharmacy</a>
+      <a href="testmonial.html">Patient Testimonial</a>
+      <a href="consult.html">Consultation Reservation</a>
+      
+    </div>
+  </nav>
+
+
+    <form id="consultation-form">
+      <h2 class="register_text" align="center">Complete this form for Register</h2>
+      <br>
+      <div class="form-group">
+        <label for="name" class="register_text">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="register_text">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="register_text">Phone   
+     Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="message" class="register_text">Message:</label>
+        <textarea id="message" name="message" required></textarea>   
+    
+      </div>
+      <button type="submit" class="button4">Submit</button>   
+    
+    </form>
+  
+    
+</body>
+<footer>
+    
+  <div class="container1">
+      <img src="../img/logo.jpg" alt="" class="footer-logo">
+      <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>Email : info@gmail.com</p>
+          <p>Phone : +94 3090 367</p>
+          <p>Address : 7/7,Jayasamrugama,Ragama</p>
+      </div>
+      <div class="footer-content">
+          <h3>Quick Links</h3>
+          <ul class="list">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="doctor.html">Doctor</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="pharmacy.html">Pharmacy</a></li>
+              <li><a href="testmonial.html">Patient Testimonial</a></li>
+              <li><a href="consult.html">Consultation Reservation</a></li>
+          </ul>
+      </div>
+      <div class="footer-contentsocial">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+                <a href="https://www.instagram.com/itz.movi_jr/">
+                    <img src="../img/instagram.png" alt="" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/home?lang=en">
+                    <img src="../img/twitter.png" alt="Twitter" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/">
+                    <img src="../img/youtube.png" alt="YouTube" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/puffy_x3/">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            
+        </ul>
+      </div>
+  </div>
+  <div class="bottom-bar">
+      <p>&copy;This Webpage is Copyrighted</p>
+  </div>
+</footer>
+</html>
