@@ -1,0 +1,414 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4856c1;
+    margin: 10px;
+}
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+#intro{
+    background-color: rgb(0, 26, 255);
+    color: rgb(0, 0, 0);
+}
+#importance{
+    background-color: rgb(0, 26, 255);
+}
+.text{
+    color: rgb(255, 255, 255);
+}
+.white{
+    color: rgb(255, 255, 255);
+}
+.red{
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+.para{
+    color: rgb(255, 255, 255);
+}
+p{
+    color: rgb(0, 0, 0);
+}
+.about{
+    color: rgb(255, 255, 255);
+}
+.title{
+    color: rgb(255, 255, 255);
+}
+.button3{
+    color: black;
+}
+
+
+.topic{
+    color: rgb(255, 255, 255);
+}
+
+.list1{
+    margin-left: 28px;
+    color: #ddff00;
+}
+.list2{
+    margin-left: 28px;
+    color: #ddff00;
+}
+
+.logo{
+    height: 50px;
+    width: 30;
+    margin-left: 30px;
+    border-radius: 10px;
+    margin-right: auto;
+}
+
+/* navigation bar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 12pt;
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+
+.main{
+    height: 80vh;
+    background-image: url('../img/main\ image\ original.jpg');
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 2s;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+}
+.main .topic{
+    position: absolute;
+    top: 90px;
+    left: 380px;
+    color: rgb(0, 81, 255); /* Adjust color as needed */
+    font-size: 70px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+@media screen {
+    
+}
+@keyframes mymove {
+    from {left: 400px;}
+    to {left: 0px;}
+}
+
+.hero{
+    height: 80vh;
+    background-image: url('../img/wp14189984-doctor-office-wallpapers.jpg');
+    justify-content: baseline;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(77, 255, 0);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    background-attachment: local;
+    margin-bottom: 5px;
+}
+.red{
+    font-size: 50px;
+}
+
+
+.last{
+    height: 80vh;
+    background-image: url('../img/doctor.jpg');
+    justify-content: baseline;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+#intro{
+    background-color: rgb(0, 68, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.small{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-contentsocial{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button1{
+    background-color: #0cc597; /* Green */
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin: 80px;
+    position: absolute;
+    right: 0;
+    top: 168%;
+}
+.button1 span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button1 span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button1:hover span{
+    padding-right: 25px;
+}
+.button1:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+
+.button2{
+    background-color: #0cc597; /* Green */
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 80px;
+    position: absolute;
+    right: 0;
+}
+.button2 span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button2 span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button2:hover span{
+    padding-right: 25px;
+}
+.button2:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Footer style sheet */
+footer{
+    background: white;
+    padding-top: 50px;
+    width: 100%;
+}
+.container1{
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width: 100%;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative; 
+}
+.list li::before{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    list-style: none;
+}
+.social-icons i{
+    color: aliceblue;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+
+/* Footer logo */
+.footer-logo{
+    width: 60px;
+    height: 10%;
+    margin: 20px;
+}
+.container1 .footer-logo{
+    height: 10%;
+    width: 350px;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4856c1;
+    margin: 0;
+  }
+  
+  /* Navigation bar */
+
+  
+  @media (max-width:500px){
+
+    .main .topic{
+        font-size: 40px;
+        left: 0;
+        left: 40px;
+        top: 80px;
+        color: black;
+    }
+    .button2{
+        position: unset;
+    }
+    .container1{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content p{
+        margin-right: 20px;
+
+    }
+    .footer-content{
+        text-align: center;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+    .footer-logo{
+        width: 350px;
+    }
+    .red{
+        font-size: 40px;
+        margin-left: 10px;
+    }
+    .button1{
+        position: static;
+        margin: 0;
+    }
+    .button2{
+        position: static;
+        margin: 0;
+    }
+    .para{
+        font-size: 18px;
+    } 
+}
+
+  
+    /* Additional responsive styles for lists and content (add as needed) */
+    .list1,
+    .list2 {
+      margin: 1rem 0; /* Adjust spacing for mobile */
+    }
+  
+    .list1 ul,
+    .list2 li {
+      display: inline-block; /* Display list items inline on mobile */
+      margin-right: 1rem; /* Add spacing between list items */
+    }
+    .footer-content a{
+        height: 30px;
+    }
